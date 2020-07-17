@@ -19,6 +19,10 @@ module.exports = {
   ],
   navLinks: [
     {
+      name: "Trang chủ",
+      url: "/",
+    },
+    {
       name: "Giới thiệu",
       url: "/#gioi-thieu",
     },
@@ -26,9 +30,14 @@ module.exports = {
       name: "Hướng dẫn order",
       url: "/#huong-dan-order",
     },
+
     {
       name: "Phản hồi của khách",
       url: "/#phan-hoi",
+    },
+    {
+      name: "Liên hệ ngay",
+      url: "/#lien-he",
     },
   ],
 
