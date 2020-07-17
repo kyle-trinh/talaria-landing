@@ -1,0 +1,33 @@
+.header-top {
+  .container {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: currentColor;
+    @include easeOut;
+  }
+
+  &__social-links {
+    display: flex;
+    align-items: center;
+
+    & > *:not(last-child) {
+      margin-right: 1.6rem;
+    }
+  }
+
+  &__phone {
+    display: flex;
+    align-items: center;
+
+    & > *:not(:last-child) {
+      margin-right: 0.8rem;
+    }
+  }
+}
