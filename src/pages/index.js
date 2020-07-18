@@ -9,7 +9,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
-      <About data={data.about.edges} />
+      <About data={data.about.edges} aboutBody={data.aboutBody.edges} />
     </Layout>
   )
 }
@@ -27,6 +27,19 @@ export const pageQuery = graphql`
             title
             subTitle
             messages
+          }
+        }
+      }
+    }
+
+    aboutBody: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/about-body/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            icon
+            content
           }
         }
       }
