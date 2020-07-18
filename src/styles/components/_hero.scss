@@ -1,0 +1,32 @@
+.hero {
+  height: 80vh;
+
+  .container {
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba($color-black, 0.7);
+    z-index: 1;
+  }
+
+  &__form {
+    background-color: rgba($color-primary, 0.8);
+    padding: 4rem 3.2rem;
+    border-radius: 8px;
+  }
+
+  &__text {
+    transform: translateY(-4rem);
+  }
+}

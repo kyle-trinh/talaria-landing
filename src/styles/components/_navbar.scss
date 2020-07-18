@@ -16,6 +16,7 @@
     &:visited {
       padding: 0.8rem 1.6rem;
       border-radius: 8px;
+      display: block;
       @include easeOut;
     }
 

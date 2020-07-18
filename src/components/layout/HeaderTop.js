@@ -9,7 +9,7 @@ const HeaderTop = () => {
     query {
       file(relativePath: { eq: "logo.png" }) {
         childImageSharp {
-          fixed(width: 96, height: 96) {
+          fixed(width: 80, height: 80) {
             ...GatsbyImageSharpFixed
           }
         }
