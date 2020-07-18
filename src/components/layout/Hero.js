@@ -1,6 +1,5 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
 import BackgroundImage from "gatsby-background-image"
 
 const Hero = () => {
@@ -16,7 +15,6 @@ const Hero = () => {
     }
   `)
 
-  console.log(data.file.childImageSharp.fluid)
   return (
     <BackgroundImage
       Tag="div"
@@ -45,7 +43,7 @@ const Hero = () => {
                 placeholder="Họ tên"
                 id="name"
                 name="name"
-                autoComplete={false}
+                autoComplete="false"
                 required
               ></input>
               <label htmlFor="name" className="form__label">

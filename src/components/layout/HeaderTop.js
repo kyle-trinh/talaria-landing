@@ -20,8 +20,8 @@ const HeaderTop = () => {
     <div className="header-top">
       <div className="container">
         <div className="header-top__social-links">
-          {socialMedia.map(social => (
-            <a href={social.url} className="header-top__social-link">
+          {socialMedia.map((social, i) => (
+            <a key={i} href={social.url} className="header-top__social-link">
               {social.name === "Facebook" ? (
                 <FacebookIcon />
               ) : (

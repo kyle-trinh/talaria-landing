@@ -6,8 +6,3 @@ messages:
   - Thật không đấy ??? $$ customer
   - Không đùa đâu !! Vì mọi thứ đều có thể khi bạn đặt hàng qua Talaria $$ talaria
 ---
-
-asd:
-
-- asdasd
-- qweqwewqe

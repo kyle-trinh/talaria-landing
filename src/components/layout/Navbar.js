@@ -6,8 +6,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container">
         <ul className="navbar__list">
-          {navLinks.map(link => (
-            <li className="navbar__item">
+          {navLinks.map((link, i) => (
+            <li className="navbar__item" key={i}>
               <a
                 href={link.url}
                 className={`navbar__link ${
