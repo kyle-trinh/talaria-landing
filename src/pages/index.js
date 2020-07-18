@@ -3,13 +3,15 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import { About } from "../components/sections"
+import { About, CTA, Order } from "../components/sections"
 
 const IndexPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Home" />
       <About data={data.about.edges} aboutBody={data.aboutBody.edges} />
+      <CTA />
+      <Order data={data.order.edges} steps={data.steps.edges} />
     </Layout>
   )
 }
@@ -40,6 +42,45 @@ export const pageQuery = graphql`
           frontmatter {
             icon
             content
+          }
+        }
+      }
+    }
+
+    order: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/order/" } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            subTitle
+            messages
+          }
+        }
+      }
+    }
+
+    steps: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/steps/" } }
+      sort: { fields: [frontmatter___date], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            text
+            title
+            image {
+              childImageSharp {
+                fluid(
+                  maxWidth: 700
+                  quality: 90
+                  traceSVG: { color: "#64ffda" }
+                ) {
+                  ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
           }
         }
       }

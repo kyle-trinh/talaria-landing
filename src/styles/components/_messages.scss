@@ -1,0 +1,25 @@
+.messages {
+  max-width: $messages-width;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  &__item {
+    padding: 2.4rem 3.2rem;
+    border-radius: 8px;
+
+    &:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+    &--talaria {
+      background-color: $color-primary;
+      color: $color-secondary;
+      grid-column: 6/-1;
+    }
+
+    &--customer {
+      background-color: $color-grey-light-2;
+      grid-column: 1 / 8;
+    }
+  }
+}
