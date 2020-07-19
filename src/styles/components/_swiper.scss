@@ -1,0 +1,110 @@
+.swiper-container {
+  // height: 38rem;
+  width: 85%;
+
+  @include respond(phone) {
+    width: 36rem;
+  }
+
+  .swiper-slide {
+    // height: 85%;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: soft-light;
+    overflow: hidden;
+    background-color: $color-primary;
+    color: $color-white;
+    border-radius: 8px;
+
+    width: 85%;
+
+    &__comment {
+      margin-right: 6rem;
+
+      .quotation-mark {
+        font-size: 8rem;
+        line-height: 0.4;
+        color: $color-secondary;
+      }
+
+      .customer-name {
+        font-size: 2.4rem;
+        color: $color-secondary;
+        margin-top: 0.8rem;
+      }
+    }
+
+    .swiper-content {
+      padding: 6rem 8rem;
+      display: flex;
+      align-items: space-between;
+      justify-content: center;
+    }
+    &__image {
+      // height: 100%;
+      width: 12rem;
+      object-fit: cover;
+      transform: scale(1);
+
+      border-radius: 50%;
+      border: 4px solid $color-secondary;
+      @include easeOut;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .swiper-scrollbar {
+    display: none;
+  }
+}
+
+.swiper-outer-container {
+  position: relative;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    background-color: $color-primary;
+    width: 6rem;
+    height: 6rem;
+    top: 45%;
+    border-radius: 8px;
+    @include easeOut;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      background-color: darken($color-primary, 10);
+
+      &::after {
+        color: $color-white;
+      }
+    }
+
+    &::after {
+      font-size: 3rem;
+      color: $color-secondary;
+
+      font-weight: 700;
+    }
+  }
+  .swiper-button-prev {
+    &::after {
+      content: "←";
+    }
+  }
+
+  .swiper-button-next {
+    &::after {
+      content: "→";
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    background-color: $color-secondary;
+  }
+}

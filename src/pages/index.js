@@ -3,7 +3,13 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { graphql } from "gatsby"
-import { About, CTA, Order } from "../components/sections"
+import {
+  About,
+  CTA,
+  Order,
+  Suggestion,
+  Testimonials,
+} from "../components/sections"
 
 const IndexPage = ({ data }) => {
   return (
@@ -12,6 +18,8 @@ const IndexPage = ({ data }) => {
       <About data={data.about.edges} aboutBody={data.aboutBody.edges} />
       <CTA />
       <Order data={data.order.edges} steps={data.steps.edges} />
+      <Suggestion />
+      <Testimonials />
     </Layout>
   )
 }
