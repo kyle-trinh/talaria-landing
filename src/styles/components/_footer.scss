@@ -1,0 +1,42 @@
+footer {
+  background-color: $color-primary;
+  color: $color-white;
+  padding: 2rem 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  svg {
+    fill: $color-white;
+    width: 2.4rem;
+    height: 2.4rem;
+    @include easeOut;
+
+    &:hover {
+      fill: $color-secondary;
+    }
+  }
+
+  .footer {
+    &__phone {
+      display: flex;
+      align-items: center;
+
+      & > *:not(:last-child) {
+        margin-right: 1.6rem;
+      }
+    }
+
+    &__social-links {
+      display: flex;
+      align-items: center;
+
+      & > *:not(last-child) {
+        margin-right: 2.4rem;
+      }
+    }
+  }
+}
