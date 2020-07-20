@@ -37,8 +37,10 @@ const Order = ({ data, steps }) => {
                   fluid={image.childImageSharp.fluid}
                   className="steps-item__img"
                 />
-                <h4>{title}</h4>
-                <p>{text}</p>
+                <div className="content">
+                  <h4>{title}</h4>
+                  <p>{text}</p>
+                </div>
               </div>
             )
           })}

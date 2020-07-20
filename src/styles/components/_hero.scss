@@ -2,7 +2,7 @@
   height: 80vh;
 
   @include respond(phone) {
-    min-height: 80vh;
+    min-height: 100vh;
   }
 
   .container {

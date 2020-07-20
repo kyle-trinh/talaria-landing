@@ -7,7 +7,7 @@ import HamburgerNav from "./HamburgerNav"
 
 const Header = ({ siteTitle, showNav, onToggle, onHeaderClick }) => (
   <header>
-    <HamburgerNav onToggle={onToggle} />
+    <HamburgerNav onToggle={onToggle} showNav={showNav} />
     <HeaderTop onClick={onHeaderClick} />
     <Navbar showNav={showNav} />
     <Hero onClick={onHeaderClick} />
