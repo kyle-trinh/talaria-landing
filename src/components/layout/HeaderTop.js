@@ -17,7 +17,7 @@ const HeaderTop = ({ onClick }) => {
     }
   `)
   return (
-    <div className="header-top" onClick={onClick}>
+    <div className="header-top">
       <div className="container">
         <div className="header-top__social-links">
           {socialMedia.map((social, i) => (

@@ -6,7 +6,7 @@ const CTA = () => {
       <div className="container">
         <p className="u-margin-bottom-small">
           Với 5 chữ CÓ này thì còn chờ đợi gì mà chưa inbox Talaria để order món
-          đồ yêu thích ngay nào bạn ơiii 💖💖💖
+          đồ yêu thích ngay nào bạn ơiii <span role="img">💖💖💖</span>
         </p>
         <button
           href="/#"

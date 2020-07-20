@@ -19,7 +19,7 @@ const IndexPage = ({ data }) => {
       <CTA />
       <Order data={data.order.edges} steps={data.steps.edges} />
       <Suggestion />
-      <Testimonials />
+      <Testimonials data={data.testimonials.edges} />
     </Layout>
   )
 }
@@ -86,6 +86,26 @@ export const pageQuery = graphql`
                   traceSVG: { color: "#64ffda" }
                 ) {
                   ...GatsbyImageSharpFluid_withWebp_tracedSVG
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    testimonials: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "/testimonials/" } }
+      sort: { fields: [frontmatter___date], order: ASC }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            name
+            content
+            avatar {
+              childImageSharp {
+                fluid(quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
                 }
               }
             }

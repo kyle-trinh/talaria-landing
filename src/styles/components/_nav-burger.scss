@@ -3,6 +3,10 @@
   top: 4rem;
   right: 4rem;
   z-index: 9999;
+  display: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
 
   &__line {
     position: relative;

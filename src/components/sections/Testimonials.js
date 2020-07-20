@@ -1,11 +1,12 @@
 import React, { useEffect, useRef } from "react"
 import Swiper from "swiper"
 import Photo from "../../images/gatsby-astronaut.png"
+import Img from "gatsby-image"
 
-const Testimonials = () => {
+const Testimonials = ({ data }) => {
   const slider = useRef(null)
   useEffect(() => {
-    const swiper = new Swiper(".swiper-container", {
+    new Swiper(".swiper-container", {
       // Optional parameters
 
       loop: true,
@@ -32,7 +33,7 @@ const Testimonials = () => {
     })
   }, [])
   return (
-    <section className="section-testimonials">
+    <section className="section-testimonials" id="phan-hoi">
       <h2 className="heading-secondary u-center-text u-margin-bottom-small">
         Khách hàng nói gì
       </h2>
@@ -41,59 +42,30 @@ const Testimonials = () => {
       </p>
       <div className="container">
         <div className="swiper-outer-container">
-          <div className="swiper-container swiper-2" ref={slider}>
+          <div className="swiper-container" ref={slider}>
             <div className="swiper-wrapper">
-              <div className="swiper-slide">
-                <div className="swiper-content">
-                  <div className="swiper-slide__comment">
-                    <p className="quotation-mark"> &#34;</p>
-                    <p>
-                      As always my nails are amazing. You are such great
-                      professionals. I don't know how I ever got by before you
-                      came in to my life! You girls are the best! Lorem ipsum
-                      dolor sit amet consectetur adipisicing elit. Odio, id!
-                    </p>
-                    <h5 className="customer-name">Mia Nguyen</h5>
+              {data.map((customer, i) => {
+                const { name, content, avatar } = customer.node.frontmatter
+
+                return (
+                  <div className="swiper-slide" key={i}>
+                    <div className="swiper-content">
+                      <div className="swiper-slide__comment">
+                        <p className="quotation-mark"> &#34;</p>
+                        <p>{content}</p>
+                        <h5 className="customer-name">{name}</h5>
+                      </div>
+                      <figure className="swiper-slide__user-photo">
+                        <Img
+                          fluid={avatar.childImageSharp.fluid}
+                          className="swiper-slide__image"
+                          alt={name}
+                        />
+                      </figure>
+                    </div>
                   </div>
-                  <figure className="swiper-slide__user-photo">
-                    <img src={Photo} alt="" className="swiper-slide__image" />
-                  </figure>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="swiper-content">
-                  <div className="swiper-slide__comment">
-                    <p className="quotation-mark"> &#34;</p>
-                    <p>
-                      As always my nails are amazing. You are such great
-                      professionals. I don't know how I ever got by before you
-                      came in to my life! You girls are the best! Lorem ipsum
-                      dolor sit amet consectetur adipisicing elit. Odio, id!
-                    </p>
-                    <h5 className="customer-name">Mia Nguyen</h5>
-                  </div>
-                  <figure className="swiper-slide__user-photo">
-                    <img src={Photo} alt="" className="swiper-slide__image" />
-                  </figure>
-                </div>
-              </div>
-              <div className="swiper-slide">
-                <div className="swiper-content">
-                  <div className="swiper-slide__comment">
-                    <p className="quotation-mark"> &#34;</p>
-                    <p>
-                      As always my nails are amazing. You are such great
-                      professionals. I don't know how I ever got by before you
-                      came in to my life! You girls are the best! Lorem ipsum
-                      dolor sit amet consectetur adipisicing elit. Odio, id!
-                    </p>
-                    <h5 className="customer-name">Mia Nguyen</h5>
-                  </div>{" "}
-                  <figure className="swiper-slide__user-photo">
-                    <img src={Photo} alt="" className="swiper-slide__image" />
-                  </figure>
-                </div>
-              </div>
+                )
+              })}
             </div>
 
             <div className="swiper-pagination"></div>

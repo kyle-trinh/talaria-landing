@@ -44,11 +44,12 @@
       display: flex;
       align-items: space-between;
       justify-content: center;
-      text-align: center;
+      text-align: left;
 
       @include respond(phone) {
         flex-direction: column;
         align-items: center;
+        text-align: center;
       }
     }
     &__image {

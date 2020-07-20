@@ -3,9 +3,9 @@ import Img from "gatsby-image"
 
 const Order = ({ data, steps }) => {
   const { frontmatter } = data[0].node
-  console.log(steps)
+
   return (
-    <section className="section-order">
+    <section className="section-order" id="huong-dan-order">
       <div className="container">
         <h2 className="heading-secondary u-center-text u-margin-bottom-small">
           {frontmatter.title}

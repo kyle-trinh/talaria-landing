@@ -19,6 +19,11 @@
     height: 1.6rem;
     fill: currentColor;
     @include easeOut;
+
+    @include respond(tab-land) {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 
   &__social-links {

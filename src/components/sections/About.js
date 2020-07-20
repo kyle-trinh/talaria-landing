@@ -9,7 +9,6 @@ import {
 
 const About = ({ data, aboutBody }) => {
   const { frontmatter } = data[0].node
-  console.log(aboutBody)
 
   const renderIcon = name => {
     if (name === "AuthenIcon") return <AuthenIcon />
@@ -19,7 +18,7 @@ const About = ({ data, aboutBody }) => {
     else if (name === "FeeIcon") return <FeeIcon />
   }
   return (
-    <section className="section-about">
+    <section className="section-about" id="gioi-thieu">
       <div className="container">
         <h2 className="heading-secondary u-center-text u-margin-bottom-small">
           {frontmatter.title}

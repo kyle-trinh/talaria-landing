@@ -27,17 +27,17 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div onClick={() => setShowNav(false)}>
       <Header
         siteTitle={data.site.siteMetadata.title}
         showNav={showNav}
         onToggle={() => setShowNav(showNav => !showNav)}
-        onHeaderClick={() => setShowNav(false)}
+        setShowNav={setShowNav}
       />
 
-      <main onClick={() => setShowNav(false)}>{children}</main>
-      <Footer onClick={() => setShowNav(false)} />
-    </>
+      <main>{children}</main>
+      <Footer />
+    </div>
   )
 }
 
