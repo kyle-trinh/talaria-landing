@@ -1,0 +1,51 @@
+.nav-burger {
+  position: fixed;
+  top: 4rem;
+  right: 4rem;
+  z-index: 9999;
+
+  &__line {
+    position: relative;
+    &,
+    &::after,
+    &::before {
+      width: 4rem;
+      height: 2px;
+      background-color: $color-grey-dark-3;
+      display: inline-block;
+    }
+
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      @include easeOut;
+    }
+
+    &::before {
+      top: -1rem;
+    }
+
+    &::after {
+      top: 1rem;
+    }
+  }
+
+  &.show > &__line {
+    background-color: transparent;
+  }
+
+  &.show > &__line::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &.show > &__line::after {
+    top: 0;
+    transform: rotate(-135deg);
+  }
+  @include respond(phone) {
+    display: block;
+  }
+}

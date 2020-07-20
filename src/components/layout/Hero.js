@@ -2,7 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 
-const Hero = () => {
+const Hero = ({ onClick }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "cover.jpg" }) {
@@ -21,6 +21,7 @@ const Hero = () => {
       className="hero"
       fluid={data.file.childImageSharp.fluid}
       role="img"
+      onClick={onClick}
     >
       <div className="overlay"></div>
       <div className="container">

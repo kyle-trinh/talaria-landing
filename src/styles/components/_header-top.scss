@@ -4,6 +4,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include respond(tab-land) {
+      padding: 1.6rem 2rem;
+    }
+
+    @include respond(phone) {
+      justify-content: center;
+    }
   }
 
   svg {
@@ -20,6 +28,10 @@
     & > *:not(last-child) {
       margin-right: 1.6rem;
     }
+
+    @include respond(phone) {
+      display: none;
+    }
   }
 
   &__phone {
@@ -28,6 +40,10 @@
 
     & > *:not(:last-child) {
       margin-right: 0.8rem;
+    }
+
+    @include respond(phone) {
+      display: none;
     }
   }
 }

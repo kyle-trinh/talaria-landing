@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { socialMedia, email, phoneNumber, siteUrl } from "@config"
 
-const HeaderTop = () => {
+const HeaderTop = ({ onClick }) => {
   const data = useStaticQuery(graphql`
     query {
       file(relativePath: { eq: "logo.png" }) {
@@ -17,7 +17,7 @@ const HeaderTop = () => {
     }
   `)
   return (
-    <div className="header-top">
+    <div className="header-top" onClick={onClick}>
       <div className="container">
         <div className="header-top__social-links">
           {socialMedia.map((social, i) => (

@@ -2,4 +2,8 @@
   max-width: $website-width;
   margin: 0 auto;
   overflow: hidden;
+
+  @include respond(tab-land) {
+    padding: 0 2rem;
+  }
 }

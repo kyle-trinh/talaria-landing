@@ -4,12 +4,22 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 6rem;
 
+    @include respond(phone) {
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 4rem;
+    }
+
     &__item {
       background-color: $color-grey-light-2;
       padding: 4rem 4rem;
       border-radius: 16px;
       border-top: 8px solid $color-primary;
       font-weight: 700;
+
+      @include respond(phone) {
+        grid-column: 3 / 6;
+        text-align: center;
+      }
     }
     svg {
       width: 8rem;
@@ -37,9 +47,18 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 4rem;
 
+    @include respond(phone) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
     &-item {
+      @include respond(phone) {
+        grid-column: 2 / 5;
+        text-align: center;
+      }
       &__img {
-        height: 24rem;
+        width: 30rem;
+        display: inline-block;
       }
 
       h4 {
@@ -49,6 +68,10 @@
 
       &:last-child {
         grid-column: 2 / 3;
+
+        @include respond(phone) {
+          grid-column: 2 / 5;
+        }
       }
     }
   }

@@ -36,6 +36,10 @@
     &:focus:invalid {
       border-bottom: 3px solid red;
     }
+
+    @include respond(phone) {
+      width: 40rem;
+    }
   }
 
   &__label {

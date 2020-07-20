@@ -1,9 +1,9 @@
 import React from "react"
 import { navLinks } from "@config"
 
-const Navbar = () => {
+const Navbar = ({ showNav }) => {
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${showNav && "show"}`}>
       <div className="container">
         <ul className="navbar__list">
           {navLinks.map((link, i) => (

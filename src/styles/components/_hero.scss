@@ -1,6 +1,10 @@
 .hero {
   height: 80vh;
 
+  @include respond(phone) {
+    min-height: 80vh;
+  }
+
   .container {
     height: 100%;
     position: relative;
@@ -8,6 +12,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include respond(phone) {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 
   .overlay {
