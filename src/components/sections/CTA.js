@@ -8,9 +8,18 @@ const CTA = () => {
           Với 5 chữ CÓ này thì còn chờ đợi gì mà chưa inbox Talaria để order món
           đồ yêu thích ngay nào bạn ơiii 💖💖💖
         </p>
-        <a href="/#lien-he" className="btn btn--secondary">
+        <button
+          href="/#"
+          onClick={() => {
+            const hero = document.querySelector(".hero")
+            const form = document.querySelector("#lien-he")
+
+            window.scrollTo(0, hero.offsetTop + form.offsetTop)
+          }}
+          className="btn btn--secondary"
+        >
           Liên hệ ngay
-        </a>
+        </button>
       </div>
     </section>
   )
