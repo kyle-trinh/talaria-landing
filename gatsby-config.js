@@ -28,6 +28,13 @@ module.exports = {
         icon: "src/images/logo.png",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        // The property ID; the tracking code won't be generated without it
+        trackingId: config.googleAnalyticsID,
+      },
+    },
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-filesystem`,

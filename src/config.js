@@ -46,4 +46,6 @@ module.exports = {
     primaryDark: "#25746B",
     secondary: "#F9F7BD",
   },
+
+  googleAnalyticsID,
 }
