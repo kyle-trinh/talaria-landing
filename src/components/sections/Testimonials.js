@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react"
 import Swiper from "swiper"
-import Photo from "../../images/gatsby-astronaut.png"
 import Img from "gatsby-image"
 
 const Testimonials = ({ data }) => {

@@ -33,7 +33,7 @@ const Hero = ({ onClick }) => {
     const form = e.target
     setServerState({ submitting: true })
     try {
-      const res = await axios({
+      await axios({
         method: "post",
         url: "https://getform.io/f/d018221a-4559-41fa-8d50-6af66f27aad4",
         data: new FormData(form),
