@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 const CTA = () => {
   return (
@@ -11,18 +12,9 @@ const CTA = () => {
             💖💖💖
           </span>
         </p>
-        <button
-          href="/#"
-          onClick={() => {
-            const hero = document.querySelector(".hero")
-            const form = document.querySelector("#lien-he")
-
-            window.scrollTo(0, hero.offsetTop + form.offsetTop)
-          }}
-          className="btn btn--secondary"
-        >
+        <Link to="/#lien-he" className="btn btn--secondary">
           Liên hệ ngay
-        </button>
+        </Link>
       </div>
     </section>
   )

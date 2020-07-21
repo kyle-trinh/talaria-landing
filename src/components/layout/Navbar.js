@@ -1,5 +1,6 @@
 import React from "react"
 import { navLinks } from "@config"
+import { Link } from "gatsby"
 
 const Navbar = ({ showNav, setShowNav }) => {
   return (
@@ -15,14 +16,14 @@ const Navbar = ({ showNav, setShowNav }) => {
               key={i}
               onClick={() => setShowNav(false)}
             >
-              <a
-                href={link.url}
+              <Link
+                to={link.url}
                 className={`navbar__link ${
                   link.url === "/#lien-he" ? "active" : ""
                 }`}
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

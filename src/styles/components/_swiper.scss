@@ -40,7 +40,7 @@
     }
 
     .swiper-content {
-      padding: 6rem 8rem;
+      padding: 6rem 10rem;
       display: flex;
       align-items: space-between;
       justify-content: center;
@@ -78,7 +78,7 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    background-color: $color-primary;
+    background-color: $color-secondary;
     width: 6rem;
     height: 6rem;
     top: 45%;
@@ -90,16 +90,16 @@
     }
 
     &:hover {
-      background-color: darken($color-primary, 10);
+      background-color: darken($color-secondary, 10);
 
       &::after {
-        color: $color-white;
+        color: $color-primary;
       }
     }
 
     &::after {
       font-size: 3rem;
-      color: $color-secondary;
+      color: $color-primary;
 
       font-weight: 700;
     }

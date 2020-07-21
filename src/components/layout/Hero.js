@@ -70,9 +70,7 @@ const Hero = ({ onClick }) => {
 
         <div className="hero__form" id="lien-he">
           <form className="form" onSubmit={handleOnSubmit}>
-            <h3 className="form__title u-margin-bottom-small">
-              Đăng ký tư vấn
-            </h3>
+            <p className="form__title u-margin-bottom-small">Đăng ký tư vấn</p>
             <div className="form__group">
               <input
                 type="text"

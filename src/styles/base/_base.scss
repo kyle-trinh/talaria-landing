@@ -12,7 +12,7 @@ html {
   /* setting as px will prevent users from zoom the website to enlarge the font */
   /* thus setting 10/16% */
   font-size: 62.5%;
-  scroll-behavior: smooth;
+  // scroll-behavior: smooth;
 
   @include respond(tab-land) {
     // width < 1200

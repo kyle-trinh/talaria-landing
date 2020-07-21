@@ -38,7 +38,7 @@ const Order = ({ data, steps }) => {
                   className="steps-item__img"
                 />
                 <div className="content">
-                  <h4>{title}</h4>
+                  <h3>{title}</h3>
                   <p>{text}</p>
                 </div>
               </div>
