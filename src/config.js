@@ -1,6 +1,6 @@
 module.exports = {
   siteTitle: "Talaria Order",
-  siteUrl: "https://www.talariaorder.com",
+  siteUrl: "https://talariaorder.com",
   siteDescription:
     "Talaria là công ty dropshipping với mục tiêu đem lại sự tự do mua sắm cho người Việt. Chúng tôi luôn cam kết: đảm bảo nguồn cung chính hãng với mức giá ưu đãi nhất",
   siteKeywords: "Talaria, Talaria Order, order đồ Mỹ, order Amazon",
@@ -47,5 +47,5 @@ module.exports = {
     secondary: "#F9F7BD",
   },
 
-  googleAnalyticsID,
+  googleAnalyticsID: "UA-157444148-2",
 }
