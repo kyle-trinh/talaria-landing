@@ -49,4 +49,5 @@ module.exports = {
 
   googleAnalyticsID: "UA-157444148-2",
   formSubmission: "https://getform.io/f/ac0da4c3-cb26-4be8-8a80-a2a7444242a7",
+  pixelID: "718214159017678",
 }

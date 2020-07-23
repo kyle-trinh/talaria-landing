@@ -20,8 +20,6 @@ const Testimonials = ({ data }) => {
             slidesPerView={1}
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
-            onSlideChange={() => console.log("slider change")}
-            onSwiper={swiper => console.log(swiper)}
             navigation
             loop={true}
           >
