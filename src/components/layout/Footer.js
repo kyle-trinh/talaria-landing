@@ -21,7 +21,15 @@ const Footer = () => {
       <div className="container">
         <div className="footer__social-links">
           {socialMedia.map((social, i) => (
-            <a key={i} href={social.url} className="footer__social-link">
+            <a
+              key={i}
+              href={social.url}
+              className="footer__social-link"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              aria-label={social.name}
+            >
+              &nbsp;
               {social.name === "Facebook" ? (
                 <FacebookIcon />
               ) : (

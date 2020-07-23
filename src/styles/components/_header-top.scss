@@ -15,10 +15,14 @@
   }
 
   svg {
-    width: 1.6rem;
-    height: 1.6rem;
+    width: 1.8rem;
+    height: 1.8rem;
     fill: currentColor;
     @include easeOut;
+
+    &:hover {
+      fill: $color-primary;
+    }
 
     @include respond(tab-land) {
       width: 2rem;

@@ -1,14 +1,15 @@
 .navbar {
   background-color: $color-primary;
-  color: $color-secondary;
+  color: $color-white;
   text-transform: capitalize;
   padding: 1.6rem 0;
+  font-size: 1.6rem;
 
   &__list {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-weight: 700;
+    font-weight: 400;
     text-transform: uppercase;
   }
 

@@ -21,7 +21,14 @@ const HeaderTop = ({ onClick }) => {
       <div className="container">
         <div className="header-top__social-links">
           {socialMedia.map((social, i) => (
-            <a key={i} href={social.url} className="header-top__social-link">
+            <a
+              key={i}
+              href={social.url}
+              className="header-top__social-link"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              aria-label={social.name}
+            >
               {social.name === "Facebook" ? (
                 <FacebookIcon />
               ) : (

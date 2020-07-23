@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import BackgroundImage from "gatsby-background-image"
 import axios from "axios"
+import config from "@config"
 
 const Hero = ({ onClick }) => {
   const [serverState, setServerState] = useState({
@@ -35,7 +36,7 @@ const Hero = ({ onClick }) => {
     try {
       await axios({
         method: "post",
-        url: "https://getform.io/f/d018221a-4559-41fa-8d50-6af66f27aad4",
+        url: config.formSubmission,
         data: new FormData(form),
       })
 

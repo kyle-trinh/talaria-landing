@@ -1,6 +1,7 @@
 .swiper-container {
   // height: 38rem;
   width: 85%;
+  border-radius: 8px;
 
   @include respond(phone) {
     width: 70%;
@@ -14,7 +15,6 @@
     overflow: hidden;
     background-color: $color-primary;
     color: $color-white;
-    border-radius: 8px;
 
     width: 85%;
 
