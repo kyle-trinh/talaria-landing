@@ -4,7 +4,7 @@
   border-radius: 8px;
 
   @include respond(phone) {
-    width: 70%;
+    width: 100%;
   }
 
   .swiper-slide {
@@ -16,7 +16,7 @@
     background-color: $color-primary;
     color: $color-white;
 
-    width: 85%;
+    width: 90%;
 
     &__comment {
       margin-right: 6rem;
@@ -78,7 +78,7 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    background-color: $color-secondary;
+    background-color: lighten($color-primary, 15);
     width: 6rem;
     height: 6rem;
     top: 45%;
@@ -90,16 +90,16 @@
     }
 
     &:hover {
-      background-color: darken($color-secondary, 10);
+      background-color: darken($color-primary, 10);
 
       &::after {
-        color: $color-primary;
+        color: $color-white;
       }
     }
 
     &::after {
       font-size: 3rem;
-      color: $color-primary;
+      color: $color-white;
 
       font-weight: 700;
     }
