@@ -4,6 +4,7 @@ import HeaderTop from "./HeaderTop"
 import Navbar from "./Navbar"
 import Hero from "./Hero"
 import HamburgerNav from "./HamburgerNav"
+import CustomerChat from "./CustomerChat"
 
 const Header = ({
   siteTitle,
@@ -17,6 +18,7 @@ const Header = ({
     <HeaderTop onClick={onHeaderClick} />
     <Navbar showNav={showNav} setShowNav={setShowNav} />
     <Hero onClick={onHeaderClick} />
+    <CustomerChat />
   </header>
 )
 
